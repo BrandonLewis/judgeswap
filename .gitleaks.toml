@@ -1,0 +1,5 @@
+# gitleaks config for CI. Default rules; nothing in this repository needs an allowlist.
+title = "judgeswap"
+
+[extend]
+useDefault = true

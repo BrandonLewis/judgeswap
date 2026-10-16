@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "judgeswap"
+version = "0.1.0"
+description = "Position-swapped LLM-as-judge, rubric scoring, regression floors, structured-output parsing and an embedding A/B scorer for evaluating generation pipelines."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/BrandonLewis/judgeswap"
+Source = "https://github.com/BrandonLewis/judgeswap"
+Changelog = "https://github.com/BrandonLewis/judgeswap/blob/main/CHANGELOG.md"
+Security = "https://github.com/BrandonLewis/judgeswap/security/policy"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["judgeswap*"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "B", "UP"]
+ignore = ["E501", "B904"]
